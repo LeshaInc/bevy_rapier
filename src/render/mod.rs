@@ -97,17 +97,13 @@ impl Default for DebugRenderContext {
 
 impl Plugin for RapierDebugRenderPlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugin(lines::DebugLinesPlugin::always_on_top(self.always_on_top))
+        app.add_plugins(lines::DebugLinesPlugin::always_on_top(self.always_on_top))
             .insert_resource(DebugRenderContext {
                 enabled: self.enabled,
                 pipeline: DebugRenderPipeline::new(self.style, self.mode),
                 always_on_top: self.always_on_top,
             })
-            .add_system(
-                debug_render_scene
-                    .in_base_set(CoreSet::PostUpdate)
-                    .before(DrawLinesLabel),
-            );
+            .add_systems(Update, debug_render_scene.before(DrawLinesLabel));
     }
 }
 

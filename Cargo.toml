@@ -6,7 +6,7 @@ resolver = "2"
 codegen-units = 1
 
 [patch.crates-io]
-#nalgebra = { path = "../nalgebra" }
+nalgebra = { git = "https://github.com/dimforge/nalgebra.git", rev = "5baf86b3111858cdecb6518f21ed3b2c579d04f5", version = "0.32.2" }
 #parry2d = { path = "../parry/crates/parry2d" }
 #parry3d = { path = "../parry/crates/parry3d" }
 #rapier2d = { path = "../rapier/crates/rapier2d" }

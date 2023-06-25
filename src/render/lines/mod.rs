@@ -117,11 +117,7 @@ impl Plugin for DebugLinesPlugin {
         let lines_config = DebugLinesConfig::always_on_top(self.always_on_top);
         app.init_resource::<DebugLines>()
             .add_startup_system(setup)
-            .add_system(
-                update
-                    .in_base_set(CoreSet::PostUpdate)
-                    .in_set(DrawLinesLabel),
-            )
+            .add_system(update.in_set(DrawLinesLabel))
             .insert_resource(lines_config.clone());
 
         #[cfg(feature = "debug-render-3d")]
