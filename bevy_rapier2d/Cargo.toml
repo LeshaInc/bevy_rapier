@@ -37,7 +37,7 @@ async-collider = [ ]
 
 
 [dependencies]
-bevy = { git = "https://github.com/bevyengine/bevy.git", rev = "469a19c290861049ad121aa83d72f830d1ec9b40", default-features = false, features = ["bevy_asset", "bevy_scene"] }
+bevy = { git = "https://github.com/bevyengine/bevy.git", rev = "c24520cb72f983a84d2664e8e5657726c2e9b4c4", default-features = false, features = ["bevy_asset", "bevy_scene"] }
 nalgebra = { git = "https://github.com/dimforge/nalgebra.git", rev = "5baf86b3111858cdecb6518f21ed3b2c579d04f5", version = "0.32.2", features = [ "convert-glam024" ] }
 # Don't enable the default features because we don't need the ColliderSet/RigidBodySet
 rapier2d = "0.17.0"
@@ -47,7 +47,7 @@ log = "0.4"
 serde = { version = "1", features = [ "derive" ], optional = true}
 
 [dev-dependencies]
-bevy = { git = "https://github.com/bevyengine/bevy.git", rev = "469a19c290861049ad121aa83d72f830d1ec9b40", default-features = false, features = ["x11"] }
+bevy = { git = "https://github.com/bevyengine/bevy.git", rev = "c24520cb72f983a84d2664e8e5657726c2e9b4c4", default-features = false, features = ["x11"] }
 oorandom = "11"
 approx = "0.5.1"
 glam = { version = "0.23", features = [ "approx" ] }
